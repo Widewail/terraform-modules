@@ -183,6 +183,13 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
     {
       "Effect": "Allow",
       "Action": [
+        "api-gateway:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
         "codebuild:BatchGetBuilds",
         "codebuild:StartBuild"
       ],
